@@ -11,6 +11,11 @@ function calculate() {
     var gender = document.getElementById("gender").value;
     var activity = Number(document.getElementById("activity").value);
 
+    if (!age || !weight || !height) {
+        alert("Please fill out all fields.");
+        return;
+    }
+    
     if (weightUnit === "lbs") {
         weight = weight / 2.20462; 
     }
